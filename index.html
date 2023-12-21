@@ -7,10 +7,28 @@
     <link rel="stylesheet" href="src/css/style.css">
 
     <!-- Gogle Fonts - Blinker -->
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@200;300;400;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;1,200;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <section class="hero" id="hero">
+      <video controls autoplay loop id="vidBg">
+        <source src="src/assets/vid/bgVid.mp4" />
+      </video>
+      <div class="intro">
+          <h1></h1>
+          <img src="src/assets/img/logo.png" alt="">
+          <p>JUST SO WE'RE CLEAR, <br>
+            <span>THIS IS GOING TO BE A SLAUGHTER.</span>
+          </p>
+          <div class="btn-area">
+            <button id="player" class="btn">Play</button>
+            <button class="btn">Repo</button>
+            <button class="btn">Official</button>
+          </div>
+      </div>
+    </section>
 
     <!-- JS -->
     <script src="src/js/script.js"></script>

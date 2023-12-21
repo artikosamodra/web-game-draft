@@ -1,0 +1,48 @@
+/* Clearing */
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Blinker', sans-serif;
+}
+
+body{
+    height: 200vh;
+}
+
+#vidBg{
+    min-width: 100%;
+    min-width: 100%;
+    /* object-fit: cover; */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+.intro{
+    position: fixed;
+    bottom: 25%;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.7);
+    /* background-color: pink; */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.intro img{
+    width: 30%;
+    height: auto;
+}
+
+.intro p{
+    color: wheat;
+    font-weight: 600;
+    font-size: 2.7rem;
+    padding: 2rem 0;
+}
+
+.intro p span{
+    color: white;
+}
+
+

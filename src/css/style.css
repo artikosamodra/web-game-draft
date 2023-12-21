@@ -46,3 +46,123 @@ body{
 }
 
 
+/* BTN NEON START */
+.btn-area .btn{
+    /* padding: 0.7rem 3.3rem; */
+    margin: 1rem;
+    color: white;
+    /* background: rgba(30, 30, 30, 0.7); */
+
+    width: 150px;
+     font-size: 20px;
+     height: 60px;
+     border: none;
+     outline: none;
+     background: black;
+     cursor: pointer;
+     position: relative;
+     border-radius: 10px;
+}
+
+.btn:before {
+    content: "";
+    background: linear-gradient(90deg,
+        #ff2400,
+        #e81d1d,
+        #e8b71d,
+        #e3e81d,
+        #1de840,
+        #1ddde8,
+        #2b1de8,
+        #dd00f3,
+        #dd00f3,
+
+        #ff2400,
+        #e81d1d,
+        #e8b71d,
+        #e3e81d,
+        #1de840,
+        #1ddde8,
+        #2b1de8,
+        #dd00f3,
+        #dd00f3);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(50% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  .btn:hover:before {
+    opacity: 1;
+  }
+
+  .btn:hover.btn:after {
+    opacity: 1;
+  }
+
+  .btn:after {
+    content: "";
+    background: linear-gradient(90deg,
+        #dd00f3,
+        #dd00f3,
+        #2b1de8,
+        #1ddde8,
+        #1de840,
+        #e3e81d,
+        #e8b71d,
+        #e81d1d,
+        #ff2400,
+
+        #dd00f3,
+        #dd00f3,
+        #2b1de8,
+        #1ddde8,
+        #1de840,
+        #e3e81d,
+        #e8b71d,
+        #e81d1d,
+        #ff2400);
+    position: absolute;
+    top: calc(50% - 2px);
+    left: -2px;
+    background-size: 200%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(50% + 4px);
+    animation: r-glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  @keyframes glowing {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 400% 0;
+    }
+  }
+
+  @keyframes r-glowing {
+    0% {
+      background-position: 400% 0;
+    }
+
+    100% {
+      background-position: 0 0;
+    }
+  }
+  /* BTN NEON END */

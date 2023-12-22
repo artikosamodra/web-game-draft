@@ -1,168 +1,204 @@
 /* Clearing */
-*, html, body{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Blinker', sans-serif;
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Blinker", sans-serif;
 }
 
-body{
-    height: 200vh;
+#vidBg {
+  min-width: 100%;
+  min-width: 100%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* object-fit: cover; */
 }
 
-#vidBg{
-    min-width: 100%;
-    min-width: 100%;
-    /* object-fit: cover; */
-    position: fixed;
-    bottom: 0;
-    right: 0;
+.intro {
+  position: fixed;
+  bottom: 33%;
+  width: 100%;
+  background-color: rgba(30, 30, 30, 0.7);
+  padding: 1.3rem 0;
+  text-align: center;
 }
 
-.intro{
-    position: fixed;
-    bottom: 25%;
-    width: 100%;
-    background-color: rgba(30, 30, 30, 0.7);
-    /* background-color: pink; */
-    padding: 3rem 0;
-    text-align: center;
+.intro img {
+  width: 35%;
+  height: auto;
 }
 
-.intro img{
-    width: 30%;
-    height: auto;
+.intro p {
+  color: wheat;
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 1rem 0;
 }
 
-.intro p{
-    color: wheat;
-    font-weight: 600;
-    font-size: 2.7rem;
-    padding: 2rem 0;
+.intro p span {
+  color: white;
 }
 
-.intro p span{
-    color: white;
+.btn-area .btn {
+  margin: 1rem;
+  color: white;
+  width: 150px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: rgba(30, 30, 30, 0.9);
+  cursor: pointer;
+  position: relative;
+  border-radius: 10px;
 }
-
 
 /* BTN NEON START */
-.btn-area .btn{
-    /* padding: 0.7rem 3.3rem; */
-    margin: 1rem;
-    color: white;
-    /* background: rgba(30, 30, 30, 0.7); */
-
-    width: 150px;
-     font-size: 20px;
-     height: 60px;
-     border: none;
-     outline: none;
-     background: black;
-     cursor: pointer;
-     position: relative;
-     border-radius: 10px;
+.btn:before {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 200%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(50% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
-.btn:before {
-    content: "";
-    background: linear-gradient(90deg,
-        #ff2400,
-        #e81d1d,
-        #e8b71d,
-        #e3e81d,
-        #1de840,
-        #1ddde8,
-        #2b1de8,
-        #dd00f3,
-        #dd00f3,
+.btn:hover:before {
+  opacity: 1;
+}
 
-        #ff2400,
-        #e81d1d,
-        #e8b71d,
-        #e3e81d,
-        #1de840,
-        #1ddde8,
-        #2b1de8,
-        #dd00f3,
-        #dd00f3);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 200%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(50% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+.btn:hover.btn:after {
+  opacity: 1;
+}
+
+.btn:after {
+  content: "";
+  background: linear-gradient(
+    90deg,
+    #dd00f3,
+    #dd00f3,
+    #2b1de8,
+    #1ddde8,
+    #1de840,
+    #e3e81d,
+    #e8b71d,
+    #e81d1d,
+    #ff2400,
+    #dd00f3,
+    #dd00f3,
+    #2b1de8,
+    #1ddde8,
+    #1de840,
+    #e3e81d,
+    #e8b71d,
+    #e81d1d,
+    #ff2400
+  );
+  position: absolute;
+  top: calc(50% - 2px);
+  left: -2px;
+  background-size: 200%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(50% + 4px);
+  animation: r-glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
   }
 
-  .btn:hover:before {
-    opacity: 1;
+  100% {
+    background-position: 400% 0;
+  }
+}
+
+@keyframes r-glowing {
+  0% {
+    background-position: 400% 0;
   }
 
-  .btn:hover.btn:after {
-    opacity: 1;
+  100% {
+    background-position: 0 0;
+  }
+}
+/* BTN NEON END */
+
+/* Tablet */
+@media (max-width: 770px) {
+  html {
+    font-size: 70%;
   }
 
-  .btn:after {
-    content: "";
-    background: linear-gradient(90deg,
-        #dd00f3,
-        #dd00f3,
-        #2b1de8,
-        #1ddde8,
-        #1de840,
-        #e3e81d,
-        #e8b71d,
-        #e81d1d,
-        #ff2400,
-
-        #dd00f3,
-        #dd00f3,
-        #2b1de8,
-        #1ddde8,
-        #1de840,
-        #e3e81d,
-        #e8b71d,
-        #e81d1d,
-        #ff2400);
-    position: absolute;
-    top: calc(50% - 2px);
-    left: -2px;
-    background-size: 200%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(50% + 4px);
-    animation: r-glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+  .intro {
+    bottom: 1;
   }
 
-  @keyframes glowing {
-    0% {
-      background-position: 0 0;
-    }
-
-    100% {
-      background-position: 400% 0;
-    }
+  .intro img {
+    width: 65%;
   }
 
-  @keyframes r-glowing {
-    0% {
-      background-position: 400% 0;
-    }
-
-    100% {
-      background-position: 0 0;
-    }
+  .btn-area .btn {
+    height: 30px;
+    width: 100px;
   }
-  /* BTN NEON END */
+}
+
+/* Smartphone */
+@media (max-width: 410px) {
+  html {
+    font-size: 60%;
+  }
+
+  .intro {
+    bottom: 1;
+  }
+
+  .intro img {
+    width: 70%;
+  }
+
+  .btn-area .btn {
+    height: 20px;
+    width: 80px;
+  }
+}

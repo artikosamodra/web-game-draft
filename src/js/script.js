@@ -1,11 +1,10 @@
 const vidBg = document.getElementById("vidBg");
 let player = document.getElementById("player");
-player.innerHTML = "Pause";
+player.innerHTML = vidBg.paused ? "Pause" : "Play";
 
 function btnPlayer() {
   if (vidBg.paused) {
     vidBg.play();
-    player.innerHTML = "Pause";
     player.innerHTML = "Pause";
   } else {
     vidBg.pause();

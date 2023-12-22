@@ -12,14 +12,14 @@ function btnPlayer() {
   }
 }
 
-function link(url) {
-  window.open(url, "_blank");
-}
+// function link(url) {
+//   window.open(url, "_blank");
+// }
 
-document.getElementById("repo").addEventListener("click", function () {
-  link("https://github.com/artikosamodra/web-game-draft");
-});
+// document.getElementById("repo").addEventListener("click", function () {
+//   link("https://github.com/artikosamodra/web-game-draft");
+// });
 
-document.getElementById("official").addEventListener("click", function () {
-  link("https://www.crysis.com/");
-});
+// document.getElementById("official").addEventListener("click", function () {
+//   link("https://www.crysis.com/");
+// });

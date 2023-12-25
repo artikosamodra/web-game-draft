@@ -8,13 +8,22 @@ body {
   font-family: "Blinker", sans-serif;
 }
 
-#vidBg {
-  min-width: 100%;
-  min-width: 100%;
+.bg-container {
   position: fixed;
-  bottom: 0;
-  right: 0;
-  /* object-fit: cover; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#vidBg {
+  width: auto;
+  height: auto;
+  object-fit: cover;
 }
 
 .intro {
@@ -181,6 +190,14 @@ body {
     height: 30px;
     width: 100px;
   }
+
+  /* #vidBg {
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    bottom: 0;
+    /* object-fit: cover; */
+  } */
 }
 
 /* Smartphone */
